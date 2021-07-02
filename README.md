@@ -1,5 +1,5 @@
 # demo-2021-ai 
 
 ```
-oc apply -f argo/demo-2021-ai.yaml
+oc apply -f argo/ai-model.yaml 
 ```
