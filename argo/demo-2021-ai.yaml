@@ -1,12 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mlops
+  name: demo-2021-ai
+  namespace: openshift-gitops
 spec:
   destination:
     namespace: mlops
     server: https://kubernetes.default.svc
-  project: openshift-gitops
+  project: default
   source:
     path: environments/mlops
     repoURL: https://github.com/blues-man/2021-ai-gitops
