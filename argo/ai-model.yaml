@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-2021-ai
+  name: ai-model
   namespace: openshift-gitops
 spec:
   destination:
