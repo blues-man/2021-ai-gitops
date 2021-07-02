@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: demo-2021-ai
+    app.kubernetes.io/component: demo-2021-ai
+    app.kubernetes.io/instance: demo-2021-ai
+    app.kubernetes.io/name: python
+    app.kubernetes.io/part-of: demo-2021-ai
+    app.openshift.io/runtime: python
+    app.openshift.io/runtime-version: 3.8-ubi8
+  name: demo-2021-ai
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: demo-2021-ai
+    weight: 100
+  wildcardPolicy: None
