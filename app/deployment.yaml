@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: ""
+    app.openshift.io/vcs-ref: "master"
     app.openshift.io/vcs-uri: https://github.com/blues-man/2021-ai.git
   labels:
     app: demo-2021-ai
@@ -33,7 +33,7 @@ spec:
         deploymentconfig: demo-2021-ai
     spec:
       containers:
-      - image: quay.io/redhatdemo/2021-ai:latest
+      - image: quay.io/openshiftlabs/2021-ai:latest
         imagePullPolicy: Always
         name: demo-2021-ai
         ports:
