@@ -33,7 +33,10 @@ spec:
         deploymentconfig: demo-2021-ai
     spec:
       containers:
-      - image: quay.io/openshiftlabs/2021-ai:latest
+      - env:
+          - name: PORT
+            value: "8080"
+        image: quay.io/openshiftlabs/2021-ai:latest
         imagePullPolicy: Always
         name: demo-2021-ai
         ports:
@@ -47,4 +50,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-
